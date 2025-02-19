@@ -18,7 +18,8 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('Contents Lists'),
-            ElevatedButton(onPressed: () => context.push('/counter'), child: const Text('Counter'))
+            ElevatedButton(onPressed: () => context.push('/counter'), child: const Text('Counter')),
+            ElevatedButton(onPressed: () => context.push('/dialog'), child: const Text('Dialog'))
           ],
         ),
       ),
