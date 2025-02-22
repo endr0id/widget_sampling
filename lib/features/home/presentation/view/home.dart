@@ -19,7 +19,8 @@ class Home extends StatelessWidget {
           children: [
             const Text('Contents Lists'),
             ElevatedButton(onPressed: () => context.push('/counter'), child: const Text('Counter')),
-            ElevatedButton(onPressed: () => context.push('/dialog'), child: const Text('Dialog'))
+            ElevatedButton(onPressed: () => context.push('/dialog'), child: const Text('Dialog')),
+            ElevatedButton(onPressed: () => context.push('/user'), child: const Text('User'))
           ],
         ),
       ),

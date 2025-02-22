@@ -3,6 +3,7 @@ import 'package:widget_sampling/features/counter/presentation/view/counter.dart'
 import 'package:widget_sampling/features/dialog/presentation/view/dialog.dart';
 import 'package:widget_sampling/features/home/presentation/view/home.dart';
 import 'package:widget_sampling/core/constants/router.dart';
+import 'package:widget_sampling/features/user/presentation/view/user.dart';
 
 final GoRouter router = GoRouter(
   routes: [
@@ -17,6 +18,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: AppRouter.dialog.path,
       builder: (context, state) => const Dialog(title: 'Dialog'),
+    ),
+    GoRoute(
+      path: AppRouter.user.path,
+      builder: (context, state) => const User(title: 'User'),
     )
   ],
 );
