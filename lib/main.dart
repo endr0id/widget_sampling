@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:widget_sampling/roter.dart';
+import 'package:widget_sampling/shared/routers/roter.dart';
 
 void main() {
   runApp(
