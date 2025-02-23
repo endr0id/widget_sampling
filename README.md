@@ -6,6 +6,7 @@ flutter ウィジェットサンプリング
 lib/
 ├── core/                     # アプリ全体で共有する機能や定義
 │   ├── errors/               # エラーハンドリング関連
+│   ├── constants/            # 定数関連
 │   └── utils/                # ユーティリティクラスや関数
 │
 ├── shared/                   # 共通機能ごとのディレクトリ
@@ -22,6 +23,7 @@ lib/
 │       │   └── repositories/ # リポジトリの実装
 │       ├── domain/           # ドメイン層
 │       │   ├── entities/     # ビジネスロジックのエンティティ
+│       │   ├── usecases/     # ビジネスロジックの処理
 │       │   └── repositories/ # リポジトリのインターフェース
 │       └── presentation/     # プレゼンテーション層
 │           ├── views/        # UIウィジェット
