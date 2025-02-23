@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:widget_sampling/features/todo/models/todo.dart';
+import 'package:widget_sampling/features/todo/data/models/todo.dart';
 
 class TodoRemoteDataSource {
   final http.Client client;
