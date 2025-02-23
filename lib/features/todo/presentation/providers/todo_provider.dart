@@ -16,10 +16,10 @@ class TodoProvider extends StateNotifier<AsyncValue<List<Todo>>> {
   final TodoUseCase _todoUseCase;
 
   TodoProvider(this._todoUseCase) : super(const AsyncValue.loading()) {
-    fetchTodos();
+    _initialized();
   }
 
-  Future<void> fetchTodos() async {
+  Future<void> _initialized() async {
     try {
       final todos = await _todoUseCase();
       state = AsyncValue.data(todos);
