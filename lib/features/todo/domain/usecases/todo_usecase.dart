@@ -6,7 +6,7 @@ class TodoUseCase {
 
   TodoUseCase(this.repository);
 
-  Future<List<Todo>> execute() {
-    return repository.getTodos();
+  Future<List<Todo>> call() async {
+    return await repository.getTodos();
   }
 }
