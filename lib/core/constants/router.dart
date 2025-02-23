@@ -2,6 +2,7 @@ enum AppRouter {
   home,
   counter,
   dialog,
+  todo,
 }
 
 extension AppRouterExtension on AppRouter {
@@ -17,6 +18,8 @@ extension AppRouterExtension on AppRouter {
         return '/counter';
       case AppRouter.dialog:
         return '/dialog';
+      case AppRouter.todo:
+        return '/todo';
     }
   }
 
