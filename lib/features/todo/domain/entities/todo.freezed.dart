@@ -16,10 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Todo {
-  int get userId => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  bool get completed => throw _privateConstructorUsedError;
+  bool get isCompleted => throw _privateConstructorUsedError;
 
   /// Create a copy of Todo
   /// with the given fields replaced by the non-null parameter values.
@@ -32,7 +31,7 @@ abstract class $TodoCopyWith<$Res> {
   factory $TodoCopyWith(Todo value, $Res Function(Todo) then) =
       _$TodoCopyWithImpl<$Res, Todo>;
   @useResult
-  $Res call({int userId, int id, String title, bool completed});
+  $Res call({int id, String title, bool isCompleted});
 }
 
 /// @nodoc
@@ -50,16 +49,11 @@ class _$TodoCopyWithImpl<$Res, $Val extends Todo>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userId = null,
     Object? id = null,
     Object? title = null,
-    Object? completed = null,
+    Object? isCompleted = null,
   }) {
     return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as int,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -68,9 +62,9 @@ class _$TodoCopyWithImpl<$Res, $Val extends Todo>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      completed: null == completed
-          ? _value.completed
-          : completed // ignore: cast_nullable_to_non_nullable
+      isCompleted: null == isCompleted
+          ? _value.isCompleted
+          : isCompleted // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -83,7 +77,7 @@ abstract class _$$TodoImplCopyWith<$Res> implements $TodoCopyWith<$Res> {
       __$$TodoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int userId, int id, String title, bool completed});
+  $Res call({int id, String title, bool isCompleted});
 }
 
 /// @nodoc
@@ -98,16 +92,11 @@ class __$$TodoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userId = null,
     Object? id = null,
     Object? title = null,
-    Object? completed = null,
+    Object? isCompleted = null,
   }) {
     return _then(_$TodoImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as int,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -116,9 +105,9 @@ class __$$TodoImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      completed: null == completed
-          ? _value.completed
-          : completed // ignore: cast_nullable_to_non_nullable
+      isCompleted: null == isCompleted
+          ? _value.isCompleted
+          : isCompleted // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -128,23 +117,18 @@ class __$$TodoImplCopyWithImpl<$Res>
 
 class _$TodoImpl implements _Todo {
   const _$TodoImpl(
-      {required this.userId,
-      required this.id,
-      required this.title,
-      required this.completed});
+      {required this.id, required this.title, required this.isCompleted});
 
-  @override
-  final int userId;
   @override
   final int id;
   @override
   final String title;
   @override
-  final bool completed;
+  final bool isCompleted;
 
   @override
   String toString() {
-    return 'Todo(userId: $userId, id: $id, title: $title, completed: $completed)';
+    return 'Todo(id: $id, title: $title, isCompleted: $isCompleted)';
   }
 
   @override
@@ -152,15 +136,14 @@ class _$TodoImpl implements _Todo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TodoImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.completed, completed) ||
-                other.completed == completed));
+            (identical(other.isCompleted, isCompleted) ||
+                other.isCompleted == isCompleted));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userId, id, title, completed);
+  int get hashCode => Object.hash(runtimeType, id, title, isCompleted);
 
   /// Create a copy of Todo
   /// with the given fields replaced by the non-null parameter values.
@@ -173,19 +156,16 @@ class _$TodoImpl implements _Todo {
 
 abstract class _Todo implements Todo {
   const factory _Todo(
-      {required final int userId,
-      required final int id,
+      {required final int id,
       required final String title,
-      required final bool completed}) = _$TodoImpl;
+      required final bool isCompleted}) = _$TodoImpl;
 
-  @override
-  int get userId;
   @override
   int get id;
   @override
   String get title;
   @override
-  bool get completed;
+  bool get isCompleted;
 
   /// Create a copy of Todo
   /// with the given fields replaced by the non-null parameter values.
