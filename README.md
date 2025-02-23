@@ -7,6 +7,7 @@ lib/
 ├── core/                     # アプリ全体で共有する機能や定義
 │   ├── errors/               # エラーハンドリング関連
 │   ├── constants/            # 定数関連
+│   ├── routers/              # ルーティング関連
 │   └── utils/                # ユーティリティクラスや関数
 │
 ├── shared/                   # 共通機能ごとのディレクトリ
@@ -27,7 +28,7 @@ lib/
 │       │   └── repositories/ # リポジトリのインターフェース
 │       └── presentation/     # プレゼンテーション層
 │           ├── views/        # UIウィジェット
-│           └── viewmodels/   # 状態管理やロジック
+│           └── provider/     # 状態管理やロジック
 └── main.dart                 # アプリのエントリーポイント
 
 ```
